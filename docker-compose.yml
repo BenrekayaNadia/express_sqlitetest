@@ -1,9 +1,9 @@
 version: '3'
 services:
-app:
-image: nediabenrekaya/express-sqlite-apptest
-container_name: express-sqlite-app-2
-volumes:
-- ./mydatabase.db:/usr/src/app/mydatabase.db
-ports:
-- "3000:3000"
+  app:
+    image: <username>/express-sqlite-apptest
+    container_name: express-sqlite-app2
+    volumes:
+     - ./mydatabase.db:/usr/src/app/mydatabase.db
+    ports:
+     - "3000:3000"

@@ -1,7 +1,7 @@
 version: '3'
 services:
   app:
-    image: <username>/express-sqlite-apptest
+    image: nediabenrekaya/express-sqlite-apptest
     container_name: express-sqlite-app2
     volumes:
      - ./mydatabase.db:/usr/src/app/mydatabase.db

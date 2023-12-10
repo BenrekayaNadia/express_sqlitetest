@@ -1,7 +1,7 @@
 version: '3'
 services:
 app:
-image: nediabenrekaya/express-sqlite-app
+image: nediabenrekaya/express-sqlite-apptest
 container_name: express-sqlite-app-2
 volumes:
 - ./mydatabase.db:/usr/src/app/mydatabase.db

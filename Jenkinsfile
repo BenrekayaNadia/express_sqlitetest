@@ -22,17 +22,17 @@ pipeline {
     }
     stage('Build'){
         steps {
-            sh 'docker build -t $DOCKERHUB_CREDENTIALS_USR/express-sqlite-app:$BUILD_ID .'
+            sh 'docker build -t $DOCKERHUB_CREDENTIALS_USR/express-sqlite-apptest:$BUILD_ID .'
         }
     }
     stage('Deliver'){
         steps {
-            sh 'docker push $DOCKERHUB_CREDENTIALS_USR/express-sqlite-app:$BUILD_ID'
+            sh 'docker push $DOCKERHUB_CREDENTIALS_USR/express-sqlite-apptest:$BUILD_ID'
         }
     }
     stage('Cleanup'){
         steps {
-            sh 'docker rmi $DOCKERHUB_CREDENTIALS_USR/express-sqlite-app:$BUILD_ID'
+            sh 'docker rmi $DOCKERHUB_CREDENTIALS_USR/express-sqlite-apptest:$BUILD_ID'
             sh 'docker logout'
         }
     }
